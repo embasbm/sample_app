@@ -1,0 +1,12 @@
+<div class="row">
+  <h2>Chatrooms</h2>
+
+  <table class="table">
+    <% @chatrooms.each do |chatroom| %>
+      <tr>
+        <td><%= link_to chatroom.topic, chatroom_path(chatroom) %></td>
+      </tr>
+    <% end %>
+  </table>
+  <%= link_to "Create a chatroom", new_chatroom_path, class: "btn btn-lg btn-primary" %>
+</div>
